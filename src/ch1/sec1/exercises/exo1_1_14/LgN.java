@@ -16,6 +16,21 @@ public class LgN {
      * @return 返回不大于log2N的最大整数
      */
     public static int lg(int N) {
-        return 0;
+        int n = 1;
+        int i = 0;
+        while (n < N) {
+            n <<= 1;
+            ++i;
+        }
+        if (n > N) {
+            n >>= 1;
+            --i;
+        }
+        return i;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(lg(10));
+        System.out.println(lg(8));
     }
 }
