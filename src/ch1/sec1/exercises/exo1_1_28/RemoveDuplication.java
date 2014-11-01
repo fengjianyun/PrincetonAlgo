@@ -1,5 +1,7 @@
 package ch1.sec1.exercises.exo1_1_28;
 
+import java.util.Arrays;
+
 /**
  * 1.1.28 Remove duplicates. Modify the test client in BinarySearch to remove
  * any duplicate keys in the whitelist after the sort.
@@ -35,4 +37,9 @@ public class RemoveDuplication {
         }
     }
 
+    public static void main(String[] args) {
+        int[] a = { 1, 2, 3, 3, 3, 5, 5, 5, 8, 9, 10, 12, 12 };
+        removeDuplicates(a);
+        System.out.println(Arrays.toString(a));
+    }
 }
