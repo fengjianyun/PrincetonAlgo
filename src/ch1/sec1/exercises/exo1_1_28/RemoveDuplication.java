@@ -16,30 +16,27 @@ public class RemoveDuplication {
      * Remove the duplicates in array a and pad the Integer.MAX => not to reallocate a new array
      * 
      * @param a
-     *            a sorted array in which remove duplicates
+     *            a sorted array in which remove duplicates, not null
      */
-    public static void removeDuplicates(int[] a) {
-        int i = a.length - 1;
-        while (i >= 0) {
-            // find the starting index of duplicates
-            int j = i - 1;
-            while (j >= 0 && a[i] == a[j]) {
-                --j;
+    public static int removeDuplicates(int[] a) {
+        // 新的长度肯定至少为1
+        int newLength = 1;
+        for (int i = 1; i < a.length; ++i) {
+            // 如果a[i] == a[i - 1]，新数组的长度就不会改变，继续寻找不同元素
+            // 如果有不同，那这就是一个新数组中的元素，长度也加一
+            if (a[i] != a[i - 1]) {
+                a[newLength] = a[i];
+                ++newLength;
             }
-            if (i - j > 1) {
-                // 将i后元素搬到j + 2
-                for (int k = i + 1, m = j + 2; k < a.length && a[k] != Integer.MAX_VALUE; ++k, ++m) {
-                    a[k] = a[m];
-                    a[k] = Integer.MAX_VALUE;
-                }
-            }
-            i = j;
         }
+        return newLength;
     }
 
     public static void main(String[] args) {
         int[] a = { 1, 2, 3, 3, 3, 5, 5, 5, 8, 9, 10, 12, 12 };
-        removeDuplicates(a);
+        // int[] a = { 1, 1, 1, 1, 1 };
+        int c = removeDuplicates(a);
+        System.out.println(c);
         System.out.println(Arrays.toString(a));
     }
 }
