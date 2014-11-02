@@ -37,6 +37,18 @@ public class EqualKeys {
         return -1;
     }
 
+    public static int count(int key, int[] a) {
+        int i = rank(key, a);
+        int count = 0;
+        if (i >= 0) {
+            while (i < a.length && a[i] == key) {
+                ++i;
+                ++count;
+            }
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
         test11();
     }
