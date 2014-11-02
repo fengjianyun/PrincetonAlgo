@@ -37,4 +37,108 @@ public class EqualKeys {
         return -1;
     }
 
+    public static void main(String[] args) {
+        test11();
+    }
+
+
+    private static void test1() {
+        int[] a = { 1 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+    }
+
+    private static void test2() {
+        int[] a = { 1, 2 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+    }
+
+    private static void test5() {
+        int[] a = { 1, 1 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+    }
+
+    private static void test6() {
+        int[] a = { 1, 1, 3 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+    }
+
+    private static void test7() {
+        int[] a = { 1, 3, 3 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+    }
+
+    private static void test8() {
+        int[] a = { 1, 1, 1 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+    }
+
+    private static void test3() {
+        int[] a = { 1, 2, 3 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+    }
+
+    private static void test4() {
+        int[] a = { 1, 2, 3, 4 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+        System.out.println(rank(5, a));
+    }
+
+
+    private static void test9() {
+        int[] a = { 1, 1, 3, 4 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+        System.out.println(rank(5, a));
+    }
+
+    private static void test10() {
+        int[] a = { 1, 2, 2, 4 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+        System.out.println(rank(5, a));
+    }
+
+    private static void test11() {
+        int[] a = { 1, 2, 3, 3 };
+        System.out.println(rank(0, a));
+        System.out.println(rank(1, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(3, a));
+        System.out.println(rank(4, a));
+        System.out.println(rank(5, a));
+    }
 }
