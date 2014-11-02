@@ -28,8 +28,10 @@ public class EqualKeys {
                 f = m;
             }
 
-            if (a[d] == a[m]) {
-                return d;
+            if (d < a.length) {
+                if (a[d] == key) {
+                    return d;
+                }
             }
         }
         return -1;
